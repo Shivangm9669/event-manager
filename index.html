@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+            <div class="nav-heading">PlanPro</div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" data-section="home-screen">Home</a></li>
+                <li><a href="#" class="nav-link" data-section="about-screen">About</a></li>
+                <li><a href="#" class="nav-link" data-section="contact-screen">Contact</a></li>
+            </ul>
+    </nav>
+
+    <section id="home-screen" class="section active">
+        <div class="form-div">
+            <form id="eventForm">
+                <h2 id="formTitle">Create Event</h2>
+                <input type="hidden" id="editIndex" value="">
+                <input type="text" id="eventName" placeholder="Event Name" required>
+                <textarea id="eventDescription" placeholder="Event Description" required></textarea>
+                <input type="datetime-local" id="eventDateTime" required>
+                <button type="submit" id="submitBtn">Add Event</button>
+            </form>
+        </div>
+        <div class="saved-data">
+            <table id="eventTable">
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Description</th>
+                        <th>Date & Time</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="eventTableBody"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="about-screen" class="section">
+        <div class="form">
+            <h2>About PlanPro</h2>
+            <p>PlanPro is your all-in-one event management platform designed to simplify planning, coordination, and execution.</p>
+            
+            <div class="features">
+                <h3>Why Choose PlanPro?</h3>
+                <ul>
+                    <li><strong>Seamless Event Planning</strong> – Manage schedules, vendors, and attendees effortlessly.</li>
+                    <li><strong>Real-Time Collaboration</strong> – Keep your team on the same page with instant updates.</li>
+                    <li><strong>Smart Automation</strong> – Set up automatic reminders, notifications, and reports.</li>
+                    <li><strong>Data-Driven Insights</strong> – Analyze event performance with detailed reports.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-screen" class="section">
+        <div class="form">
+            <form class="contact-form" id="contactForm">
+                <h2>Contact Us</h2>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" id="sndbtn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <div id="toast" class="toast"></div>
+    <footer>
+        <p>&copy; <span id="year"></span> MAQ Software Private ltd. All rights reserved from 2002.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
