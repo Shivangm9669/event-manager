@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Marcellus&family=Playwrite+IN:wght@100..400&display=swap');
+
+*{
+    font-family: "Marcellus", serif;
+}
+
+body{
+    margin:0;
+    padding:0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.section{
+    display: none;
+}
+
+.section.active{
+    display:block;
+}  
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right, rgb(20, 8, 80) , rgb(16, 3, 47));
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    width:100%;
+    height: 8vh;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display:flex;
+    justify-content: space-evenly;
+    padding-right:10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color : white;
+    padding-left: 20px;
+    font-size : 1.1rem;
+}
+
+.nav-heading{
+    color:white;
+    font-size: 2rem;
+    padding-left: 10px;
+}
+
+
+#about-screen .form {
+    background-color: white;
+    max-width: 800px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#about-screen h2 {
+    color: rgb(20, 8, 80);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#about-screen h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-image: linear-gradient(to right, rgb(20, 8, 80), rgb(16, 3, 47));
+    border-radius: 2px;
+}
+
+#about-screen p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.features {
+    background-color: rgba(20, 8, 80, 0.03);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.features h3 {
+    color: rgb(20, 8, 80);
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 20px;
+}
+
+.features li {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.features li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.features li:before {
+    content: '→';
+    color: rgb(20, 8, 80);
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.features li strong {
+    color: rgb(20, 8, 80);
+    margin-right: 8px;
+}
+
+.form-div {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#home-screen , #about-screen , #contact-screen{
+    background-color:  rgb(237, 232, 232);
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+#contact-screen form{
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#formTitle {
+    color: #333333;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+#eventForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+#eventForm input[type="text"],
+#eventForm input[type="datetime-local"],
+#eventForm textarea {
+    padding: 0.8rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+
+#eventForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#eventForm input:focus,
+#eventForm textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.1);
+}
+
+#contactForm{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+    padding: 0.8rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#contactForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.1);
+}
+
+#submitBtn {
+    background-color: #4a90e2;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submitBtn:hover {
+    background-color: #357abd;
+}
+
+#submitBtn:active {
+    transform: scale(0.98);
+}
+
+#submitBtn , #sndbtn{
+    background-color: rgb(20, 8, 80);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submitBtn:hover , #sndbtn:hover {
+    background-color: rgb(35, 19, 114);
+}
+
+#submitBtn:active , #sndbtn:active {
+    transform: scale(0.98);
+}
+
+::placeholder {
+    color: #999999;
+    opacity: 1;
+}
+.saved-data {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem 1rem;
+    overflow-x: auto;
+}
+
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    min-width: 250px;
+    max-width: 350px;
+    padding: 15px 25px;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+    z-index: 1100;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.toast.success {
+    background-color: #28a745;
+    border-left: 5px solid #1e7e34;
+}
+
+.toast.error {
+    background-color: #dc3545;
+    border-left: 5px solid #bd2130;
+}
+
+#eventTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#eventTable thead {
+    background-color: #f8f9fa;
+}
+
+#eventTable th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #e9ecef;
+}
+
+#eventTable td {
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    color: #495057;
+}
+
+#eventTable tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+#eventTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+#eventTable td:last-child {
+    white-space: nowrap;
+}
+
+#eventTable button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+#eventTable .btn-edit {
+    background-color: rgb(20, 8, 80);
+    color: white;
+}
+
+#eventTable .btn-edit:hover {
+    background-color: rgb(24, 7, 110);
+}
+
+#eventTable .btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+#eventTable .btn-delete:hover {
+    background-color: #c82333;
+}
+
+#eventForm input:invalid,
+#eventForm textarea:invalid {
+    border-color: #ff4d4d;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(20, 8, 80);
+    color: white;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form,.form-div{
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@media (max-width: 600px) {
+    .form-div {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    #formTitle {
+        font-size: 1.5rem;
+    }
+    
+    #eventForm input,
+    #eventForm textarea {
+        font-size: 0.95rem;
+    }
+
+    #eventTable {
+        font-size: 0.9rem;
+    }
+
+    #eventTable th,
+    #eventTable td {
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .toast {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        min-width: unset;
+        max-width: unset;
+        font-size: 0.9rem;
+    }
+}
+
+
